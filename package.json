@@ -7,7 +7,10 @@
   "keywords": ["api", "rest", "sequelize", "koa", "graphql", "postgres", "pg"],
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha -R spec \"test/**/*.test.js\"",
-    "generate-docs": "./node_modules/.bin/jsdoc2md \"src/**/*.js\" --template DOCS.hbs > DOCS.md"
+    "generate-docs": "./node_modules/.bin/jsdoc2md \"src/**/*.js\" --template DOCS.hbs > DOCS.md",
+    "preversion": "npm test",
+    "version": "npm run generate-docs && git add DOCS.md",
+    "postversion": "git push && git push --tags"
   },
   "author": "Alek Barszczewski <alek.barszczewski@gmail.com>",
   "license": "ISC",
