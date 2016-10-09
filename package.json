@@ -1,6 +1,6 @@
 {
   "name": "api-stack",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "REST/GraphQL/Koa/Sequelize API stack",
   "main": "index.js",
   "repository": "https://github.com/alekbarszczewski/api-stack",
