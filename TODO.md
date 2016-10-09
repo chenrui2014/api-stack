@@ -1,0 +1,17 @@
+
+- TESTS!
+- swagger ui options/auth/etc
+- cli
+- sequelize toSwagger -> include + options
+- sequelize - dynamic attributes
+- sequelize - counters
+- sequelize - initial migration
+- sequelize model encrypted
+- worker/tasks
+- sequelize background hooks
+- services/emails
+- services/push notifications
+- services image upload (s3)
+- services (facebook)
+- seuelize cuid/uid
+- sequelize extensions?

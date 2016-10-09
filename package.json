@@ -1,0 +1,58 @@
+{
+  "name": "api-stack",
+  "version": "0.0.1",
+  "description": "REST/GraphQL/Koa/Sequelize API stack",
+  "main": "index.js",
+  "repository": "",
+  "keywords": ["api", "rest", "sequelize", "koa", "graphql", "postgres", "pg"],
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha -R spec \"test/**/*.test.js\"",
+    "generate-docs": "./node_modules/.bin/jsdoc2md \"src/**/*.js\" --template DOCS.hbs > DOCS.md"
+  },
+  "author": "Alek Barszczewski <alek.barszczewski@gmail.com>",
+  "license": "ISC",
+  "peerDependencies": {
+    "sequelize": "^4.0.0-2"
+  },
+  "dependencies": {
+    "ajv": "^4.6.1",
+    "basic-auth": "^1.0.4",
+    "bcryptjs": "^2.3.0",
+    "boom": "^4.0.0",
+    "clone": "^1.0.2",
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "fleek-validator": "^0.6.3",
+    "is-plain-object": "^2.0.1",
+    "json-schema-ref-parser": "^3.1.2",
+    "jsonwebtoken": "^7.1.9",
+    "koa": "^2.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-mount": "^2.0.0",
+    "koa-route": "^3.2.0",
+    "koa-sslify": "^1.1.0",
+    "koa-static": "^3.0.0",
+    "koa-unless": "^1.0.0",
+    "lodash.omit": "^4.5.0",
+    "lodash.pick": "^4.4.0",
+    "object-path": "^0.11.1",
+    "path-to-regexp": "^1.5.3",
+    "selectn": "^1.1.1",
+    "swagger-jsdoc": "^1.7.0",
+    "swagger-parser": "^4.0.0-beta.2",
+    "swagger-ui": "^2.2.5",
+    "traverse": "^0.6.6"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "jsdoc-to-markdown": "^1.3.7",
+    "kcors": "^1.2.1",
+    "koa-bodyparser": "^3.2.0",
+    "lodash": "^4.15.0",
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5",
+    "supertest": "^2.0.0",
+    "supertest-as-promised": "^4.0.0"
+  }
+}
