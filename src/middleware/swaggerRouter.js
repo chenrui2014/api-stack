@@ -99,6 +99,9 @@ const swaggerRouter = function (swagger, controllers, options) {
           .then(function () {
             const resStatus = ctx.status || 200
             if (ctx.body && responseFilters[resStatus]) {
+              if (ctx.body.toJSON) {
+                ctx.body = ctx.body.toJSON()
+              }
               responseFilters[`${resStatus}`].filter(ctx.body)
             }
           })
