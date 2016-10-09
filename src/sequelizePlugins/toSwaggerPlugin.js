@@ -19,6 +19,15 @@ swTypes.JSONB = swTypes.JSON
 swTypes.DATE = function (attr) { return { type: 'string', format: 'date-time' } }
 swTypes.DATEONLY = function (attr) { return { type: 'string', format: 'date' } }
 swTypes.TIME = function (attr) { return { type: 'string', format: 'time' } }
+swTypes.RANGE = function (attr) {
+  const sw =  {
+    type: 'array',
+    items: getSw({ type: { key: attr.type._subtype } }),
+  }
+  sw.maxItems = 2
+  sw.minItems = 2
+  return sw
+}
 
 const getSw = function (attr) {
   const sw = {}
@@ -107,6 +116,21 @@ const toSwaggerPlugin = function (Sequelize) {
     }
     if (this._scope && this._scope.attributes) {
       swagger.properties = pick(swagger.properties, this._scope.attributes)
+    }
+    if (this._scope.include) {
+      this._scope.include.forEach(include => {
+        const as = include.as || include.model.name
+        const type = this.associations[as].associationType
+        const subSwagger = include.model.toSwagger()
+        if (type === 'HasMany' || type === 'BelongsToMany') {
+          swagger.properties[as] = {
+            type: 'array',
+            items: subSwagger,
+          }
+        } else if (type === 'BelongsTo' || type === 'HasOne') {
+          swagger.properties[as] = subSwagger
+        }
+      })
     }
     return swagger
   }

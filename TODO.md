@@ -1,6 +1,8 @@
 
 - TESTS!
-- swagger ui options/auth/etc
+- sequelize toSwagger -> required/not null
+- sequelize findOrCount
+- swagger/sequelize -> validation errors
 - cli
 - sequelize toSwagger -> include + options
 - sequelize - dynamic attributes
