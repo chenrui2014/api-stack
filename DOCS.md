@@ -14,6 +14,8 @@
 * [helpers](#module_helpers)
     * [.encodeJWT(payload, secret, [options])](#module_helpers.encodeJWT) ⇒ <code>String</code>
     * [.verifyHash(password, hash)](#module_helpers.verifyHash) ⇒ <code>Boolean</code>
+    * [.getFacebookProfile(fbAccessToken, [options])](#module_helpers.getFacebookProfile) ⇒ <code>Object</code>
+    * [.getFacebookPhotoUrl(facebookId, [options])](#module_helpers.getFacebookPhotoUrl) ⇒ <code>Object</code>
     * [.loadSwagger(controllersPath, swagger)](#module_helpers.loadSwagger)
 
 
@@ -105,6 +107,37 @@ verifyHash
 | --- | --- |
 | password | <code>String</code> | 
 | hash | <code>String</code> | 
+
+<a name="module_helpers.getFacebookProfile"></a>
+
+### helpers.getFacebookProfile(fbAccessToken, [options]) ⇒ <code>Object</code>
+Get facebook profile
+
+**Kind**: static method of <code>[helpers](#module_helpers)</code>  
+**Returns**: <code>Object</code> - response from FB  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fbAccessToken | <code>String</code> | facebook access token |
+| [options] | <code>Object</code> |  |
+| [options.fields] | <code>Array.&lt;String&gt;</code> | fields to fetch |
+| [options.apiVersion] | <code>String</code> | = "v2.7" - FB API version |
+
+<a name="module_helpers.getFacebookPhotoUrl"></a>
+
+### helpers.getFacebookPhotoUrl(facebookId, [options]) ⇒ <code>Object</code>
+Get facebook profile photo URL
+
+**Kind**: static method of <code>[helpers](#module_helpers)</code>  
+**Returns**: <code>Object</code> - response from FB  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| facebookId | <code>String</code> | facebook profile id |
+| [options] | <code>Object</code> |  |
+| [options.width] | <code>String</code> | = "400" - photo width |
+| [options.height] | <code>String</code> | = "400" - photo height |
+| [options.type] | <code>String</code> | = "large" - photo type |
 
 <a name="module_helpers.loadSwagger"></a>
 
