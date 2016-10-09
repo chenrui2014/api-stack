@@ -11,7 +11,7 @@ $ npm install --save api-stack
 
 ## API reference
 
-
+[DOCS.md](DOCS.md)
 
 ## Test
 
