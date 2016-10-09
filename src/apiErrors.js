@@ -9,8 +9,11 @@ const Boom = require('boom')
  * @memberof module:apiErrors
  */
 class ApiError extends Error {
-  constructor (message) {
+  constructor (message, data) {
     super(message)
+    if (data !== undefined) {
+      this.data = data
+    }
   }
 }
 
