@@ -2,6 +2,15 @@
 ## API Reference
 
 
+* [apiErrors](#module_apiErrors)
+    * [.ApiError](#module_apiErrors.ApiError)
+    * [.ValidationError](#module_apiErrors.ValidationError)
+    * [.UnauthorizedError](#module_apiErrors.UnauthorizedError)
+    * [.ForbiddenError](#module_apiErrors.ForbiddenError)
+    * [.NotFoundError](#module_apiErrors.NotFoundError)
+    * [.NotImplementedError](#module_apiErrors.NotImplementedError)
+
+
 * [helpers](#module_helpers)
     * [.encodeJWT(payload, secret, [options])](#module_helpers.encodeJWT) ⇒ <code>String</code>
     * [.verifyHash(password, hash)](#module_helpers.verifyHash) ⇒ <code>Boolean</code>
@@ -25,9 +34,45 @@
     * [.toSwaggerPlugin(Sequelize)](#module_sequelizePlugins.toSwaggerPlugin)
 
 
-<a name="apiStack_apiErrors"></a>
+<a name="module_apiErrors"></a>
 
-## apiStack:apiErrors
+## apiErrors
+<a name="module_apiErrors.ApiError"></a>
+
+### apiErrors.ApiError
+ApiError (bese error class)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
+<a name="module_apiErrors.ValidationError"></a>
+
+### apiErrors.ValidationError
+ValidationError (400)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
+<a name="module_apiErrors.UnauthorizedError"></a>
+
+### apiErrors.UnauthorizedError
+UnauthorizedError (401)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
+<a name="module_apiErrors.ForbiddenError"></a>
+
+### apiErrors.ForbiddenError
+ForbiddenError (403)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
+<a name="module_apiErrors.NotFoundError"></a>
+
+### apiErrors.NotFoundError
+NotFoundError (404)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
+<a name="module_apiErrors.NotImplementedError"></a>
+
+### apiErrors.NotImplementedError
+NotImplementedError (501)
+
+**Kind**: static class of <code>[apiErrors](#module_apiErrors)</code>  
 <a name="module_apiStack"></a>
 
 ## apiStack
@@ -212,7 +257,9 @@ Swagger UI middleware.
 | Param | Type | Description |
 | --- | --- | --- |
 | [options] | <code>Object</code> |  |
-| [options.schemaUrl] | <code>Object</code> | URL of swagger schema (default /swagger.json) |
+| [options.schemaUrl] | <code>String</code> | URL of swagger schema (default /swagger.json) |
+| [options.apiKeyName] | <code>String</code> | name of header or query param (default "x-access-token") |
+| [options.apiKeyType] | <code>String</code> | "query" or "header" (default "header") |
 
 <a name="module_sequelizePlugins"></a>
 
