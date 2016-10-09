@@ -1,10 +1,18 @@
 {
   "name": "api-stack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "REST/GraphQL/Koa/Sequelize API stack",
   "main": "index.js",
   "repository": "https://github.com/alekbarszczewski/api-stack",
-  "keywords": ["api", "rest", "sequelize", "koa", "graphql", "postgres", "pg"],
+  "keywords": [
+    "api",
+    "rest",
+    "sequelize",
+    "koa",
+    "graphql",
+    "postgres",
+    "pg"
+  ],
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha -R spec \"test/**/*.test.js\"",
     "generate-docs": "./node_modules/.bin/jsdoc2md \"src/**/*.js\" --template DOCS.hbs > DOCS.md",
