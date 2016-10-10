@@ -6,4 +6,5 @@ module.exports = {
   initRelationsPlugin: require('./initRelationsPlugin'),
   toSwaggerPlugin: require('./toSwaggerPlugin'),
   hashedPlugin: require('./hashedPlugin'),
+  safeRollbackPlugin: require('./safeRollbackPlugin'),
 }
