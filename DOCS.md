@@ -33,6 +33,7 @@
     * [.hashedPlugin(Sequelize)](#module_sequelizePlugins.hashedPlugin)
     * [.initModelPlugin(Sequelize)](#module_sequelizePlugins.initModelPlugin)
     * [.initRelationsPlugin(Sequelize)](#module_sequelizePlugins.initRelationsPlugin)
+    * [.safeRollbackPlugin(Sequelize)](#module_sequelizePlugins.safeRollbackPlugin)
     * [.toSwaggerPlugin(Sequelize)](#module_sequelizePlugins.toSwaggerPlugin)
 
 
@@ -387,6 +388,28 @@ Post.relations = {
 }
 
 sequelize.initRelations()
+```
+<a name="module_sequelizePlugins.safeRollbackPlugin"></a>
+
+### sequelizePlugins.safeRollbackPlugin(Sequelize)
+Transaction.prototype.safeRollback().
+
+**Kind**: static method of <code>[sequelizePlugins](#module_sequelizePlugins)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Sequelize | <code>Sequelize</code> | Sequelize library (not instance!) |
+
+**Example**  
+```js
+const Sequelize = require('sequelize')
+require('api-stack').sequelizePlugins.safeRollback(Sequelize)
+
+const sequelize = new Sequelize(...)
+
+
+const t = yield sequelize.transaction()
+yield t.safeRollback()
 ```
 <a name="module_sequelizePlugins.toSwaggerPlugin"></a>
 
