@@ -1,5 +1,6 @@
 
 - TESTS!
+- sequelize.safeRollback()
 - sequelize toSwagger -> required/not null
 - sequelize findOrCount
 - swagger/sequelize -> validation errors

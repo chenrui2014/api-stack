@@ -4,6 +4,9 @@
   "description": "REST/GraphQL/Koa/Sequelize API stack",
   "main": "index.js",
   "repository": "https://github.com/alekbarszczewski/api-stack",
+  "engines": {
+    "node": "6.x"
+  },
   "keywords": [
     "api",
     "rest",
@@ -13,6 +16,9 @@
     "postgres",
     "pg"
   ],
+  "bin": {
+    "api-stack": "./src/index.js"
+  },
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha -R spec \"test/**/*.test.js\"",
     "generate-docs": "./node_modules/.bin/jsdoc2md \"src/**/*.js\" --template DOCS.hbs > DOCS.md",
@@ -32,6 +38,7 @@
     "boom": "^4.0.0",
     "clone": "^1.0.2",
     "co": "^4.6.0",
+    "db-migrate": "^0.10.0-beta.19",
     "debug": "^2.2.0",
     "fb": "^1.1.1",
     "fleek-validator": "^0.6.3",

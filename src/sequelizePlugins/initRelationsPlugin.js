@@ -41,7 +41,7 @@ const initRelationsPlugin = function (Sequelize) {
             Object.keys(ModelClass.relations[relType]).forEach(as => {
               const options = ModelClass.relations[relType][as]
               const model = this.model(options.model)
-              const through = options.through ? this.model(options.through) : options.through
+              const through = options.through ? (options.through.model ? Object.assign({}, options.through, { model: this.model(options.through.model) }) : this.model(options.through)) : options.through
               ModelClass[relType](model, Object.assign(options, { model: undefined, as, through }))
             })
           }
@@ -98,6 +98,12 @@ const getScopeDependencies = function (sequelize, modelName) {
 }
 
 const normalizeScope = function (sequelize, scope) {
+  if (typeof scope === 'function') {
+    return function () {
+      const scopeOpts = scope.apply(this, arguments)
+      return normalizeScope(sequelize, scopeOpts) 
+    }
+  }
   if (scope.include) {
     scope.include.forEach(include => {
       if (include.model) {
