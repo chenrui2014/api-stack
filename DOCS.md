@@ -34,6 +34,7 @@
     * [.hashedPlugin(Sequelize)](#module_sequelizePlugins.hashedPlugin)
     * [.initModelPlugin(Sequelize)](#module_sequelizePlugins.initModelPlugin)
     * [.initRelationsPlugin(Sequelize)](#module_sequelizePlugins.initRelationsPlugin)
+    * [.jsonifyPlugin(Sequelize)](#module_sequelizePlugins.jsonifyPlugin)
     * [.safeRollbackPlugin(Sequelize)](#module_sequelizePlugins.safeRollbackPlugin)
     * [.toSwaggerPlugin(Sequelize)](#module_sequelizePlugins.toSwaggerPlugin)
 
@@ -401,6 +402,17 @@ Post.relations = {
 
 sequelize.initRelations()
 ```
+<a name="module_sequelizePlugins.jsonifyPlugin"></a>
+
+### sequelizePlugins.jsonifyPlugin(Sequelize)
+Init model from Model Class.
+
+**Kind**: static method of <code>[sequelizePlugins](#module_sequelizePlugins)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Sequelize | <code>Sequelize</code> | Sequelize library (not instance!) |
+
 <a name="module_sequelizePlugins.safeRollbackPlugin"></a>
 
 ### sequelizePlugins.safeRollbackPlugin(Sequelize)
