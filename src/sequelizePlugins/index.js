@@ -7,4 +7,5 @@ module.exports = {
   toSwaggerPlugin: require('./toSwaggerPlugin'),
   hashedPlugin: require('./hashedPlugin'),
   safeRollbackPlugin: require('./safeRollbackPlugin'),
+  dynamicAttributesPlugin: require('./dynamicAttributesPlugin'),
 }

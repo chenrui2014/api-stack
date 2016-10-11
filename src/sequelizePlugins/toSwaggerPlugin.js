@@ -115,7 +115,17 @@ const toSwaggerPlugin = function (Sequelize) {
       delete swagger.required
     }
     if (this._scope && this._scope.attributes) {
-      swagger.properties = pick(swagger.properties, this._scope.attributes)
+      const realNames = this._scope.attributes.map(attr => {
+        if (Array.isArray(attr)) {
+          return attr[1] // alias
+        }
+        else if (attr instanceof Sequelize.Dynamic) {
+          return attr.field // dynamic
+        } else {
+          return attr
+        }
+      })
+      swagger.properties = pick(swagger.properties, realNames)
     }
     if (this._scope.include) {
       this._scope.include.forEach(include => {
