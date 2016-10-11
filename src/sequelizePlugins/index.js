@@ -8,4 +8,5 @@ module.exports = {
   hashedPlugin: require('./hashedPlugin'),
   safeRollbackPlugin: require('./safeRollbackPlugin'),
   dynamicAttributesPlugin: require('./dynamicAttributesPlugin'),
+  jsonifyPlugin: require('./jsonifyPlugin'),
 }

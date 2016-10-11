@@ -26,9 +26,6 @@ class JsonFilter {
   filter (data) {
     const self = this
     if (!data) { return }
-    if (data && data.toJSON) {
-      data = data.toJSON()
-    }
     traverse(data).forEach(function (val) {
       if (!this.parent) { return }
       let node = this
