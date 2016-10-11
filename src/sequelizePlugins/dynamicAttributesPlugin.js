@@ -5,7 +5,6 @@
  * Dynamic attributes.
  * @memberof module:sequelizePlugins
  * @param {Sequelize} Sequelize - Sequelize library (not instance!)
- * @example
  */
 const dynamicAttributesPlugin = function (Sequelize) {
 
