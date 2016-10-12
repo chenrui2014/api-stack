@@ -1,12 +1,9 @@
 
 - TESTS!
-- sequelize.safeRollback()
 - sequelize toSwagger -> required/not null
 - sequelize findOrCount
 - swagger/sequelize -> validation errors
 - cli
-- sequelize toSwagger -> include + options
-- sequelize - dynamic attributes
 - sequelize - counters
 - sequelize - initial migration
 - sequelize model encrypted
