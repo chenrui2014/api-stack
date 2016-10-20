@@ -9,4 +9,6 @@ module.exports = {
   safeRollbackPlugin: require('./safeRollbackPlugin'),
   dynamicAttributesPlugin: require('./dynamicAttributesPlugin'),
   jsonifyPlugin: require('./jsonifyPlugin'),
+  filtersPlugin: require('./filtersPlugin'),
+  ftsPlugin: require('./ftsPlugin'),
 }
