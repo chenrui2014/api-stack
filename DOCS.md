@@ -31,6 +31,8 @@
 
 * [sequelizePlugins](#module_sequelizePlugins)
     * [.dynamicAttributesPlugin(Sequelize)](#module_sequelizePlugins.dynamicAttributesPlugin)
+    * [.filtersPlugin(Sequelize)](#module_sequelizePlugins.filtersPlugin)
+    * [.ftsPlugin(Sequelize)](#module_sequelizePlugins.ftsPlugin)
     * [.hashedPlugin(Sequelize)](#module_sequelizePlugins.hashedPlugin)
     * [.initModelPlugin(Sequelize)](#module_sequelizePlugins.initModelPlugin)
     * [.initRelationsPlugin(Sequelize)](#module_sequelizePlugins.initRelationsPlugin)
@@ -304,6 +306,28 @@ Swagger UI middleware.
 
 ### sequelizePlugins.dynamicAttributesPlugin(Sequelize)
 Dynamic attributes.
+
+**Kind**: static method of <code>[sequelizePlugins](#module_sequelizePlugins)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Sequelize | <code>Sequelize</code> | Sequelize library (not instance!) |
+
+<a name="module_sequelizePlugins.filtersPlugin"></a>
+
+### sequelizePlugins.filtersPlugin(Sequelize)
+Filters plugin
+
+**Kind**: static method of <code>[sequelizePlugins](#module_sequelizePlugins)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Sequelize | <code>Sequelize</code> | Sequelize library (not instance!) |
+
+<a name="module_sequelizePlugins.ftsPlugin"></a>
+
+### sequelizePlugins.ftsPlugin(Sequelize)
+FTS plugin
 
 **Kind**: static method of <code>[sequelizePlugins](#module_sequelizePlugins)</code>  
 
